@@ -19,6 +19,7 @@ class Solution:
       for t in sorted(time_map.keys()):
         visit = set()
         for src in time_map[t]:
-          dfs(src,time_map[t])
+            if src in secrets:
+              dfs(src,time_map[t])
 
   return list(secrets)
