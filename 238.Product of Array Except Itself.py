@@ -8,4 +8,4 @@ class Solution:
       for i in range(length - 1, -1, -1):
         ans[i] = ans[i] * R
         R = R * nums[i]
-      retuyrn ans
+      return ans
