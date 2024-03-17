@@ -9,7 +9,7 @@ class Solution:
         ans.append(intervals[idx])
         idx += 1
       # case 2: when they are overlapping
-      while idx < length and intervals[idx][0] > newInterval[1]:
+      while idx < length and intervals[idx][0] <= newInterval[1]:
         newInterval[0] = min(newInterval[0], intervals[idx][0])
         newInterval[1] = max(newInterval[1], intervals[idx][1])
         idx += 1
